@@ -28,6 +28,36 @@ public class DigitsTest {
     }
 
     @org.junit.Test
+    public void testParseThree() throws Exception {
+        assertEquals(Digits.parse(three), 3);
+    }
+
+    @org.junit.Test
+    public void testParseFour() throws Exception {
+        assertEquals(Digits.parse(four), 4);
+    }
+
+    @org.junit.Test
+    public void testParseFive() throws Exception {
+        assertEquals(Digits.parse(five), 5);
+    }
+
+    @org.junit.Test
+    public void testParseSix() throws Exception {
+        assertEquals(Digits.parse(six), 6);
+    }
+
+    @org.junit.Test
+    public void testParseSeven() throws Exception {
+        assertEquals(Digits.parse(seven), 7);
+    }
+
+    @org.junit.Test
+    public void testParseEight() throws Exception {
+        assertEquals(Digits.parse(eight), 8);
+    }
+
+    @org.junit.Test
     public void testParseNine() throws Exception {
         assertEquals(Digits.parse(nine), 9);
     }
