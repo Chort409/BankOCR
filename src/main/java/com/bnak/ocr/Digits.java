@@ -1,8 +1,6 @@
 package com.bnak.ocr;
 
-
 public class Digits {
-
     public static final String ZERO = " _ | ||_|";
     public static final String ONE =  "     |  |";
     public static final String TWO = " _  _||_ ";
@@ -14,45 +12,28 @@ public class Digits {
     public static final String EIGHT = " _ |_||_|";
     public static final String NINE = " _ |_| _|";
 
+    private static final Map<String, Integer> digitsMap;
+    static {
+        digitsMap = new HashMap<String, Integer>(10);
+        digitsMap.put(ZERO, 0);
+        digitsMap.put(ONE, 1);
+        digitsMap.put(TWO, 2);
+        digitsMap.put(THREE, 3);
+        digitsMap.put(FOUR, 4);
+        digitsMap.put(FIVE, 5);
+        digitsMap.put(SIX, 6);
+        digitsMap.put(SEVEN, 7);
+        digitsMap.put(EIGHT, 8);
+        digitsMap.put(NINE, 9);
+    }
+
     public static int parse(String s)
     {
-        int result;
-        switch (s)
-        {
-            case ZERO :
-                result = 0;
-                break;
-            case ONE :
-                result = 1;
-                break;
-            case TWO :
-                result = 2;
-                break;
-            case THREE :
-                result = 3;
-                break;
-            case FOUR :
-                result = 4;
-                break;
-            case FIVE :
-                result = 5;
-                break;
-            case SIX :
-                result = 6;
-                break;
-            case SEVEN :
-                result = 7;
-                break;
-            case EIGHT :
-                result = 8;
-                break;
-            case NINE :
-                result = 9;
-                break;
-            default:
-                result = -1;
-                break;
-        }
-        return result;
+        Integer result = digitsMap.get(s);
+        if (null == result)
+            return -1;
+        else
+            return result;
+
     }
 }
