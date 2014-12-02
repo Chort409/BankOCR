@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class DigitsTest {
 
-    private String one = "    |  | ";
+    public static String one =  "     |  |";
     public static String two = " _  _||_ ";
     public static String three = " _  _| _|";
     public static String four = "   |_|  |";

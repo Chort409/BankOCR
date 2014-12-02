@@ -4,7 +4,7 @@ package com.bnak.ocr;
 public class Digits {
 
     public static final String ZERO = " _ | ||_|";
-    public static final String ONE =  "    |  | ";
+    public static final String ONE =  "     |  |";
     public static final String TWO = " _  _||_ ";
     public static final String THREE = " _  _| _|";
     public static final String FOUR = "   |_|  |";
