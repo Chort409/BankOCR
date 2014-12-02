@@ -22,8 +22,10 @@ public class Parser {
             int digit = Digits.parse(number.toString());
 
             if (digit < 0)
-                throw new IllegalArgumentException(String.format("Unparseable digit at %d : %s", i , number.toString()) );
-
+            {
+                result.append("?");
+                continue;
+            }
             result.append(String.valueOf(digit));
         }
         return result.toString();
